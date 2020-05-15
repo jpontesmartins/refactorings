@@ -1,8 +1,17 @@
+const report = require("./inline-function");
 
-function rating(aDriver) {
-    return moreThanFiveLateDeliveries(aDriver) ? 2 : 1;
-}
+test('inline function', () => {
+    //arrange
+    const aCustomer = {
+        name: "John",
+        location: "City"
+    }
 
-function moreThanFiveLateDeliveries(aDriver) {
-    return aDriver.numberOfLateDeliveries > 5;
-}
+    //act
+    report.reportLines(aCustomer);
+
+    //assert
+    expect(aCustomer.name).toBe("John");
+    expect(aCustomer.location).toBe("City");
+
+});
