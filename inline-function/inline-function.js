@@ -5,22 +5,23 @@
 // Objetivo: remove a redundância quando a leitura do trecho de código diz o mesmo que a função.
 
 
-function rating(aDriver) {
-    return moreThanFiveLateDeliveries(aDriver) ? 2 : 1;
+function reportLines(aCustomer) {
+    const lines = [];
+    gatherCustomerData(lines, aCustomer);
+    return lines;
 }
 
-function moreThanFiveLateDeliveries(aDriver) {
-    return aDriver.numberOfLateDeliveries > 5;
+function gatherCustomerData(out, aCustomer) {
+    out.push(["name", aCustomer.name]);
+    out.push(["location", aCustomer.location]);
 }
 
-
-const aDriver = {
+const aCustomer = {
     name: "John",
-    numberOfLateDeliveries: 6
+    location: "City"
 }
 
-console.log(rating(aDriver));
-
+console.log(reportLines(aCustomer));
 
 
 
