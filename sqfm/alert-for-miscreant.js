@@ -19,7 +19,6 @@ function alertForMiscreant(people) {
     return "";
 }
 
-
 function setOffAlarms() {
     console.log("Alarm! Alarm!");
 }
