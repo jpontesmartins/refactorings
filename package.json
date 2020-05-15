@@ -1,0 +1,14 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "description": "Katas for refactoring",
+  "main": "separate-query-from-modifier.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
