@@ -5,7 +5,7 @@
 // Objetivo: torna explícita a relação entre os dados do item
 
 function readingOutsideRange(station, range) {
-    return station.readings.filter(r => r.temp < range.getMin() || r.temp > range.getMax());
+    return station.readings.filter(reading => range.contains(reading.temp));
 }
 
 
@@ -19,6 +19,10 @@ class NumberRange {
     getMin() { return this._data.min; }
 
     getMax() { return this._data.max; }
+
+    contains(temp) {
+        return temp < this.getMin() || temp > this.getMax();
+    }
 }
 
 

@@ -3,7 +3,7 @@ const temperatures = require("./ipo");
 test(' introduce parameter object', () => {
     //arrange
     const station = {
-        nam: "ZB1",
+        name: "ZB1",
         readings: [
             { temp: 47, time: "2020-05-05 20:00" },
             { temp: 53, time: "2020-05-05 20:00" },
@@ -17,13 +17,15 @@ test(' introduce parameter object', () => {
         temperatureCeiling: 55
     }
     const range = new temperatures.NumberRange(
-            operationPlan.temperatureFloor,
-            operationPlan.temperatureCeiling
-        );
+        operationPlan.temperatureFloor,
+        operationPlan.temperatureCeiling
+    );
 
     //act
     const alerts = temperatures.
         readingOutsideRange(station, range);
+
+    // console.log(alerts);
 
     //assert
     expect(alerts[0].temp).toBe(47);
