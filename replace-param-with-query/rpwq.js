@@ -1,3 +1,2 @@
-console.log("Replace Parameter with Query");
-console.log("Replace Parameter with Quer - Refactored");
+console.log("Replace Parameter with Query - Refactored");
 
