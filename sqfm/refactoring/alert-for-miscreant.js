@@ -6,21 +6,30 @@
 // Dica: qualquer função quer retorne algum valor não deve ter efeitos colaterais.
 
 function alertForMiscreant(people) {
-    for (const p of people) {
-        if (p === "Don") {
-            setOffAlarms();
-            return "Don";
-        }
-        if (p === "John") {
-            setOffAlarms();
-            return "John";
-        }
+    if (findMiscreant(people) !== "") {
+        setOffAlarms();
     }
-    return "";
 }
 
 function setOffAlarms() {
     console.log("Alarm! Alarm!");
 }
 
+function findMiscreant(people) {
+    for (const p of people) {
+        if (p === "Don") {
+            return "Don";
+        }
+        if (p === "John") {
+            return "John";
+        }
+    }
+    return "";
+}
+
+module.exports = {
+    alertForMiscreant,
+    setOffAlarms,
+    findMiscreant
+}
 
