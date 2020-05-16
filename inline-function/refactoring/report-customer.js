@@ -7,25 +7,12 @@
 
 function reportLines(aCustomer) {
     const lines = [];
-    gatherCustomerData(lines, aCustomer);
+    lines.push(["name", aCustomer.name]);
+    lines.push(["location", aCustomer.location]);
     return lines;
 }
 
-function gatherCustomerData(out, aCustomer) {
-    out.push(["name", aCustomer.name]);
-    out.push(["location", aCustomer.location]);
+module.exports = {
+    reportLines
 }
-
-const aCustomer = {
-    name: "John",
-    location: "City"
-}
-
-console.log(reportLines(aCustomer));
-
-
-
-
-
-
 
