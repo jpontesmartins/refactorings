@@ -2,33 +2,32 @@
 
 // Introduce Parameter Object
 
-//Objetivo: torna explícita a relação entre os dados do item
+// Objetivo: torna explícita a relação entre os dados do item
 
-const station = {
-    nam: "ZB1",
-    readings: [
-        { temp: 47, time: "2020-05-05 20:00" },
-        { temp: 53, time: "2020-05-05 20:00" },
-        { temp: 58, time: "2020-05-05 20:00" },
-        { temp: 53, time: "2020-05-05 20:00" },
-        { temp: 51, time: "2020-05-05 20:00" }
-    ]
+function readingOutsideRange(station, range) {
+    return station.readings.filter(reading => range.contains(reading.temp));
 }
 
-function readingOutsideRange(station, min, max) {
-    return station.readings.filter(r => r.temp < min || r.temp > max);
+
+class NumberRange {
+    constructor(min, max) {
+        this._data = {
+            min: min,
+            max: max
+        }
+    }
+    getMin() { return this._data.min; }
+
+    getMax() { return this._data.max; }
+
+    contains(temp) {
+        return temp < this.getMin() || temp > this.getMax();
+    }
 }
 
-const operationPlan = {
-    temperatureFloor: 52,
-    temperatureCeiling: 55
+
+module.exports = {
+    NumberRange,
+    readingOutsideRange
 }
-
-const alerts = readingOutsideRange(station,
-    operationPlan.temperatureFloor,
-    operationPlan.temperatureCeiling);
-
-console.log(alerts);
-
-
 
