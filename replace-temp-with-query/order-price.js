@@ -11,9 +11,10 @@ class Order {
         const discountFactor = 0.98;
         if (basePrice > 1000) {
             discountFactor -= 0.03;
-            return basePrice * discountFactor;
         }
+        return basePrice * discountFactor;
 
     }
 
 }
+
