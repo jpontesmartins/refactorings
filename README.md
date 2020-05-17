@@ -10,3 +10,9 @@ Examples from Martin Fowler's book "Refactoring".
 
 ## Replace Parameter with Query
 
+## Replace Query with Parameter
+
+
+
+
+
