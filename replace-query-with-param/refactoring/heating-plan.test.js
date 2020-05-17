@@ -1,17 +1,23 @@
 const heatingPlan = require("./heating-plan");
 const HeatingPlan = heatingPlan.HeatingPlan;
 
-test('heating plan ',() => {
-    // const thePlan = new HeatingPlan(10, 20);
-    const thePlan2 = new HeatingPlan(1, 5);
-
-    //eh até ruim de testar por causa da dependência...
-    
-    console.log(thePlan2.getTargetTemperature());
-    console.log("thePlan2.");
-
-    // heatingPlan.caller();
-
-    expect(1).toBe(2);
+test('max as 5, heating plan ',() => {
+    const thePlan = new HeatingPlan(1, 5);
+    const temperature = thePlan.getTargetTemperature(15);
+    expect(temperature).toBe(5);
 });
+
+test('min as 1, heating plan ',() => {
+    const thePlan = new HeatingPlan(1, 5);
+    const temperature = thePlan.getTargetTemperature(-10);
+    expect(temperature).toBe(1);
+});
+
+test('allowed range (1-5), heating plan ',() => {
+    const thePlan = new HeatingPlan(1, 5);
+    const temperature = thePlan.getTargetTemperature(3);
+    expect(temperature).toBe(3);
+});
+
+
 
