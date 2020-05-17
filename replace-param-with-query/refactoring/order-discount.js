@@ -2,8 +2,8 @@
 
 // Replace Parameter with Query
 
-// Objetivo: Eliminar duplicação;
-// quando é passado um valor que a função pode determinar por sí própria é um tipo de duplicação
+// Objetivo: Eliminar duplicação; 
+// É um tipo de duplicação quando é passado um valor para a função que ela pode determinar por sí própria.
 
 class Order {
     constructor() {
@@ -13,17 +13,22 @@ class Order {
 
     getFinalPrice() {
         const basePrice = this.quantity * this.itemPrice;
+        return this.discountedPrice(basePrice);
+    }
+    
+    discountLevel() {
         let discountLevel;
         if (this.quantity > 100) {
             discountLevel = 2;
-        } else {
+        }
+        else {
             discountLevel = 1;
         }
-        return this.discountedPrice(basePrice, discountLevel);
+        return discountLevel;
     }
-    
-    discountedPrice(basePrice, discountLevel) {
-        switch (discountLevel) {
+
+    discountedPrice(basePrice) {
+        switch (this.discountLevel()) {
             case 1: return basePrice * 2;
             case 2: return basePrice * 1;
         }
@@ -31,5 +36,6 @@ class Order {
 
 }
 
-const order = new Order();
-console.log(order.getFinalPrice());
+module.exports = {
+    Order
+}

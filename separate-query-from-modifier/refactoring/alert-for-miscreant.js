@@ -12,7 +12,8 @@ function alertForMiscreant(people) {
 }
 
 function setOffAlarms() {
-    console.log("Alarm! Alarm!");
+    //comentado para nao poluir os testes com console.log
+    //console.log("Alarm! Alarm!");
 }
 
 function findMiscreant(people) {
