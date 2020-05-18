@@ -1,4 +1,4 @@
-const medicalScore = require("./score");
+const Score = require("./score");
 
 test(' score ', () => {
     //arrange
@@ -17,7 +17,7 @@ test(' score ', () => {
     }
 
     //act
-    const score = medicalScore.score(candidate, medicalExam, scoringGuide);
+    const score = new Score(candidate, medicalExam, scoringGuide).execute();
 
     //assert
     expect(score).toBe(-5);

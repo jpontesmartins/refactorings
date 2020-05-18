@@ -1,38 +1,45 @@
 function score(candidate, medicalExam, scoringGuide) {
-    let result = 0;
-    let healthLevel = 0;
-    let highMedicalRiskFlag = false;
+    return new Score(candidate, medicalExam, scoringGuide).execute();
+}
 
-    if (medicalExam.isSmoker) {
-        healthLevel += 10;
-        highMedicalRiskFlag = true;
+class Score {
+    constructor(candidate, medicalExam, scoringGuide) {
+        this._candidate = candidate;
+        this._medicalExam = medicalExam;
+        this._scoringGuide = scoringGuide;
+        this._result = 0;
+        this._healthLevel = 0;
+        this._highMedicalRiskFlag = false;
     }
 
-    let certificationGrade = "regular";
-    if (scoringGuide.stateWithLowCertification(candidate.originState)) {
-        certificationGrade = "low";
-        result -= 5;
+    execute() {
+        this.scoreSmoking();
+        this.scoreCandidateOriginState();
+        this.finalScore();
+        return this._result;
     }
 
-    result-= Math.max(healthLevel-5,0);
-    return result;
-}
 
-module.exports = {
-    score
-}
+    finalScore() {
+        this._result -= Math.max(this._healthLevel - 5, 0);
+    }
 
+    scoreCandidateOriginState() {
+        let certificationGrade = "regular";
+        if (this._scoringGuide.stateWithLowCertification(this._candidate.originState)) {
+            certificationGrade = "low";
+            this._result -= 5;
+        }
+    }
 
-const medicalExam = {
-    isSmoker: true
-}
-
-const candidate = {
-    originState: "SC"
-}
-
-const scoringGuide = {
-    stateWithLowCertification: (originState) => {
-        return false;
+    scoreSmoking() {
+        if (this._medicalExam.isSmoker) {
+            this._healthLevel += 10;
+            this._highMedicalRiskFlag = true;
+        }
     }
 }
+
+
+
+module.exports = Score;
