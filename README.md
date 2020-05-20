@@ -2,16 +2,37 @@
 A set of refactoring katas to practice.  
 Examples from Martin Fowler's book "Refactoring".
 
-## Separate Query from Modifiers
+## Inline Function
 
 ## Introduce Parameter Object
 
-## Inline Function
+## Replace Command with Function
+
+## Replace Function with Command
 
 ## Replace Parameter with Query
 
 ## Replace Query with Parameter
 
+## Replace Temp with Query
+
+## Separate Query from Modifier
+
+---
+
+## Glossary
+
+### Function  
+
+### Paramater  
+
+### Command  
+
+### Query  
+
+### Modifier  
+
+### Object  
 
 
 
