@@ -1,6 +1,6 @@
 // Refatoração
 
-// Replace commando with function
+// Replace command with function
 
 // Objetivo: simplificar
 
@@ -20,17 +20,5 @@ class ChargeCalculator {
     }
 }
 
-const customer = {
-    baseRate: 1
-}
-const usage = 2;
-
-const provider = {
-    connectionCharge: 3
-}
-
-const monthCharge = new ChargeCalculator(customer, usage, provider).getCharge();
-console.log(monthCharge);
-
-
+module.exports = ChargeCalculator;
 
