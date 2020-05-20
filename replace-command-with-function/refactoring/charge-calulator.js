@@ -20,5 +20,11 @@ class ChargeCalculator {
     }
 }
 
-module.exports = ChargeCalculator;
+function charge(customer, usage, provider) {
+    return new ChargeCalculator(customer, usage, provider).getCharge();
+}
+
+module.exports = {
+    charge
+};
 

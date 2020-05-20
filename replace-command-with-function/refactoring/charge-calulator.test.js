@@ -1,4 +1,4 @@
-const ChargeCalculator = require('./charge-calulator');
+const { charge } = require('./charge-calulator');
 
 test(' charge calculator', ()=> {
     //arrange
@@ -11,7 +11,7 @@ test(' charge calculator', ()=> {
     }
     
     //act
-    const monthCharge = new ChargeCalculator(customer, usage, provider).getCharge();
+    const monthCharge = charge(customer, usage, provider);
     
     //assert
     expect(monthCharge).toBe(5);
