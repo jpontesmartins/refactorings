@@ -18,3 +18,4 @@ orders.push(o3);
 const highPriorityCount = orders.filter(o => "high" === o.priority || "rush" === o.priority).length;
 
 console.log(highPriorityCount);
+
