@@ -7,7 +7,7 @@ class Priority {
         return this._level;
     }
 
-    getIndex() {
+    getLevelIndex() {
         return Priority.getLevels().findIndex(level => level === this._level);
     }
 
@@ -16,7 +16,7 @@ class Priority {
     }
 
     higherThan(other) {
-        return this.getIndex() > other.getIndex();
+        return this.getLevelIndex() > other.getLevelIndex();
     }
 
 }
