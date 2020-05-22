@@ -1,4 +1,3 @@
-const orderPriority = require('./order-priority');
 const callers = require('./callers');
 
 test(' order priority',() => {

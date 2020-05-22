@@ -1,4 +1,5 @@
 const Order = require('./order-priority');
+const Priority = require('./Priority');
 
 //use/callers
 const o1 = new Order("high");
@@ -11,7 +12,7 @@ orders.push(o2);
 orders.push(o3);
 
 //alteracao a ser realizada no priority
-const highPriorityCount = orders.filter(o => "high" === o.getPriority() || "rush" === o.getPriority()).length;
+const highPriorityCount = orders.filter(order => order.getPriority().higherThan(new Priority("normal"))).length;
 
 module.exports = {
     highPriorityCount
