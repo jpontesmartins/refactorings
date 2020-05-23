@@ -37,36 +37,11 @@ function retrieveOrder() {
 }
 
 function chargeOrder(charge) {
-    console.log('charge order ' + charge);
+    // console.log('charge order ' + charge);
 
 }
 
 module.exports = {
     charge
-}
-
-
-
-//with conditionals
-
-let allocatedResources = [];
-let availableResources = [];
-
-let result;
-if (availableResources.length === 0) {
-    result = createResource();
-    allocatedResources.push(result);
-} else {
-    result = availableResources.pop();
-    allocatedResources.push(result);
-}
-
-console.log("allocatedResources");
-console.log(allocatedResources);
-console.log("availableResources");
-console.log(availableResources);
-
-function createResource() {
-    return "resource created!";
 }
 
