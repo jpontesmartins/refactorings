@@ -1,3 +1,9 @@
+// Refatoração
+
+// Slide Statements
+
+// Objetivo: O códico fica mais legível quando coisas relacionadas ficam próximas 
+
 const pricingPlan = retrievePricingPlan();
 const order = retrieveOrder();
 const baseCharge = pricingPlan.base;
