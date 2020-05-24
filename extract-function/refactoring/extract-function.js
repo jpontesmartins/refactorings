@@ -2,21 +2,18 @@
 
 // Extract Function
 
-// Objetivo: 
+// Objetivo: Extrair um trecho de código para uma função que tenha um nome auto explicativo
 
-// No variables out of scope
+// No variables out of scope/ Using local variable/ Reassigning local variable
 
 function printOwing(invoice) {
     
     printBanner();
     
-    //calculate outstanding
     let outstanding = calculateOutstanding(invoice);
 
-    //record due date
     recordDueDate(invoice);
 
-    //print details
     printDetails(invoice, outstanding);
 
 }
