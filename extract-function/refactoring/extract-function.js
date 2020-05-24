@@ -22,10 +22,14 @@ function printOwing(invoice) {
 
 
     //print details
+    printDetails(invoice, outstanding);
+
+}
+
+function printDetails(invoice, outstanding) {
     console.log(`name: ${invoice.customer}`);
     console.log(`amount: ${outstanding}`);
     console.log(`due: ${invoice.dueDate.toLocaleDateString()}`);
-
 }
 
 function printBanner() {
