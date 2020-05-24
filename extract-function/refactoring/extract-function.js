@@ -7,14 +7,11 @@
 // No variables out of scope
 
 function printOwing(invoice) {
-    let outstanding = 0;
-
+    
     printBanner();
-
+    
     //calculate outstanding
-    for (const o of invoice.orders) {
-        outstanding += o.amount;
-    }
+    let outstanding = calculateOutstanding(invoice);
 
     //record due date
     recordDueDate(invoice);
@@ -22,6 +19,14 @@ function printOwing(invoice) {
     //print details
     printDetails(invoice, outstanding);
 
+}
+
+function calculateOutstanding(invoice) {
+    let outstanding = 0;
+    for (const o of invoice.orders) {
+        outstanding += o.amount;
+    }
+    return outstanding;
 }
 
 function recordDueDate(invoice) {
