@@ -5,3 +5,10 @@
 // Objetivo: 
 
 // Renaming a Function (simple mechanics)
+
+
+
+
+
+
+

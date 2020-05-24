@@ -12,7 +12,7 @@ test('extract function..', () => {
         }],
         customer: "Fulano",
     }
-    // act
+    // act (...esse mesmo ou ou outstanding? pois o resto é print...)
     extractFunction.printOwing(invoice);
 
     // assert
