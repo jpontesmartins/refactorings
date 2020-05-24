@@ -6,6 +6,8 @@
 
 // No variables out of scope/ Using local variable/ Reassigning local variable
 
+const Clock = require('./clock');
+
 function printOwing(invoice) {
     
     printBanner();
@@ -41,4 +43,9 @@ function printBanner() {
     console.log('-------------');
     console.log('customer owes');
     console.log('-------------');
+}
+
+
+module.exports = {
+    printOwing
 }
