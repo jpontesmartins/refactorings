@@ -2,8 +2,8 @@
 
 // Replace Temp with Query
 
-// Objetivo: Ao quebrar funções muito grandes, 
-// transformar variaveis dela em funções deixa mais fácil extrair as partes da função.
+// Objetivo: Quebrar funções muito grandes. 
+// Transformar variaveis da função em funções menores facilita extrair as partes da função.
 
 class Order {
     constructor(quantity, item) {

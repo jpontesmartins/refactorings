@@ -1,4 +1,9 @@
+// Refatoração
 
+// Replace Temp with Query
+
+// Objetivo: Quebrar funções muito grandes. 
+// Transformar variaveis da função em funções menores facilita extrair as partes da função.
 
 class Order {
     constructor(quantity, item) {
