@@ -9,21 +9,26 @@
 // Adding a parameter
 // Changing a parameter to one of its properties
 
-// Renaming a Function (migration mechanics)
 function circum(radius) {
+    return circumference(radius);
+}
+
+// Renaming a Function (migration mechanics)
+function circumference(radius) {
     return 2 * Math.PI * radius;
 }
 
 // Adding a parameter
 class Book {
-    addReservation(customer) {
+    addReservation(customer, isPriority) {
+        assert(isPriority === true || isPriority === false)
         this._reservations.push(customer);
     }
 }
 
 // Changing a parameter to one of its properties
-function inNewEngland(aCustomer){
-    return ["MA","CT","ME"].includes(aCustomer.address.state);
+function inNewEngland(state){
+    return ["MA","CT","ME"].includes(state);
 }
 
 const customer1 = {
@@ -43,10 +48,4 @@ const customer3 = {
 }
 const someCustomers = [customer1, customer2, customer3];
 
-const newEnglanders = someCustomers.filter(customer => inNewEngland(customer));
-
-
-
-
-
-
+const newEnglanders = someCustomers.filter(customer => inNewEngland(customer.address.state));
