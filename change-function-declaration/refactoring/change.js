@@ -27,8 +27,8 @@ class Book {
 }
 
 // Changing a parameter to one of its properties
-function inNewEngland(aCustomer){
-    return ["MA","CT","ME"].includes(aCustomer.address.state);
+function inNewEngland(state){
+    return ["MA","CT","ME"].includes(state);
 }
 
 const customer1 = {
@@ -48,8 +48,4 @@ const customer3 = {
 }
 const someCustomers = [customer1, customer2, customer3];
 
-const newEnglanders = someCustomers.filter(customer => inNewEngland(customer));
-
-console.log(newEnglanders);
-
-
+const newEnglanders = someCustomers.filter(customer => inNewEngland(customer.address.state));
