@@ -10,9 +10,7 @@ function renderPerson(outStream, person) {
     result.push(renderPhoto(person.photo));
     result.push("...other info..");
     result.push("...other info..");
-    // result.push(`<p> title: ${person.photo.title}  </p>`); //titulo..
-    // result.push(emitPhotoData(person.photo)); //dados da foto
-    result.push(xxnew(person.photo));
+    result.push(emitPhotoData(person.photo));
     return result.join("\n");
 }
 
@@ -26,20 +24,17 @@ function renderPhoto(photo) {
 function photoDiv(photo) {
     return [
         "<div>",
-        xxnew(photo),
+        emitPhotoData(photo),
         "</div>"
     ].join("\n");
 }
 
-function xxnew(photo) {
+function emitPhotoData(photo) {
     return [
-        `<p> title: ${photo.title} </p>`, //titulo..
+        `<p> title: ${photo.title} </p>`, 
         `<p> location: ${photo.location} </p>`,
         `<p> date: ${photo.date.toDateString()} </p>`
     ].join("\n");
-}
-
-function emitPhotoData(aPhoto) {
 }
 
 module.exports = {
