@@ -24,7 +24,7 @@ function listRecentPhotos(outStream, photos) {
 function emitPhotoData(outStream, photo) {
     outStream.write(`<p> title: ${photo.title} </p>\n`);
     outStream.write(`<p> date: ${photo.date.toDateString()} </p>\n`);
-    outStream.write(`<p> location: ${photo.location} </p>\n`);
+    outStream.write(`<p> location: ${photo.location} </p>\n`); //essa linha precisa ser alterada para ser chamada de diferentes formas
 }
 
 
