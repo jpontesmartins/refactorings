@@ -1,3 +1,8 @@
+// Refatoração
+
+// Extract Class
+
+// Objetivo: Separação de responsabilidades
 
 
 class Person {
@@ -8,14 +13,14 @@ class Person {
 
     getTelephoneNumber() { return `(${this.officeAreaCode}) ${this.officeNumber}`; }
 
+    setOfficeAreaCode(arg) { this._officeAreaCode= arg; }
+    
     getOfficeAreaCode() { return this._officeAreaCode; }
 
-    setOfficeAreaCode(arg) { this._officeAreaCode= arg; }
-
-    getOfficeNumber() { return this._officeNumber; }
-
     setOfficeNumber(arg) { this._officeNumber = arg; }
-
+    
+    getOfficeNumber() { return this._officeNumber; }
+    
 }
 
 const person = new Person();
