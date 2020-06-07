@@ -5,6 +5,8 @@ Examples from Martin Fowler's book "Refactoring".
 
 ## Change Function Declaration
 
+## Extract Class
+
 ## Extract Function
 
 ## Inline Function
@@ -46,6 +48,8 @@ Examples from Martin Fowler's book "Refactoring".
 ### Modifier  
 
 ### Object  
+
+### Temp
 
 
 
