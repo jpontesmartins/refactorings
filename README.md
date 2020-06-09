@@ -71,15 +71,15 @@ Examples from Martin Fowler's book "Refactoring".
 ### Value
 
 ### Actions
-#### Change (5)
-#### Replace (3)
-#### Move
-#### Extract
-#### Separate
-#### Split
-#### Slide
-#### Inline
-#### Introduce
+#### Change (2)
+#### Replace (6)
+#### Move (2)
+#### Extract (2)
+#### Separate (1)
+#### Split (1) 
+#### Slide (1)
+#### Inline (1)
+#### Introduce (1)
 
 
 
