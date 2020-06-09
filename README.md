@@ -5,6 +5,10 @@ Examples from Martin Fowler's book "Refactoring".
 
 ## Change Function Declaration
 
+## Change Reference to Value
+
+~~## Change Value to Reference~~
+
 ## Extract Class
 
 ## Extract Function
@@ -19,6 +23,8 @@ Examples from Martin Fowler's book "Refactoring".
 
 ## Replace Command with Function
 
+~~## Repĺace Derived Variable with Query~~
+
 ## Replace Function with Command
 
 ## Replace Parameter with Query
@@ -32,6 +38,11 @@ Examples from Martin Fowler's book "Refactoring".
 ## Separate Query from Modifier
 
 ## Slide Statements
+
+~~## Split Variable~~
+
+~~## Rename Field~~
+
 
 ---
 
@@ -50,6 +61,25 @@ Examples from Martin Fowler's book "Refactoring".
 ### Object  
 
 ### Temp
+
+### Derived Variable
+
+### Field
+
+### Reference
+
+### Value
+
+### Actions
+#### Change (5)
+#### Replace (3)
+#### Move
+#### Extract
+#### Separate
+#### Split
+#### Slide
+#### Inline
+#### Introduce
 
 
 
